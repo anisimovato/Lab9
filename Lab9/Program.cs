@@ -26,9 +26,10 @@ namespace Lab9
                 Console.Write("Ваш выбор: ");
                 int n = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine(n < 5);
-
-
-
+                if (n > 4 || n < 0)
+                {
+                    Console.Write("Некорректный номер операции");
+                }
                 {
                     if (n == 1)
                     {
@@ -46,15 +47,7 @@ namespace Lab9
                     {
                         Console.Write($"Результат = {x / y}");
                     }
-                    if (n > 4)
-                    {
-                        Console.Write("Не корректный номер операции");
-
-                    }
-
-
                 }
-
             }
             catch (System.FormatException)
             {
@@ -64,10 +57,6 @@ namespace Lab9
             {
                 Console.WriteLine(ex.Message);
             }
-
-
-
-
             Console.ReadKey();
         }
 
