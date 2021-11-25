@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
-
 namespace Lab9
 {
     class Program
@@ -26,27 +24,25 @@ namespace Lab9
                 Console.Write("Ваш выбор: ");
                 int n = Convert.ToInt32(Console.ReadLine());
                 
-                if (n > 4 || n < 0)
+
+                switch (n)
                 {
-                    Console.Write("Некорректный номер операции");
-                }
-                {
-                    if (n == 1)
-                    {
-                        Console.Write($"Результат = {x + y}");
-                    }
-                    if (n == 2)
-                    {
-                        Console.Write($"Результат = {x - y}");
-                    }
-                    if (n == 3)
-                    {
-                        Console.Write($"Результат = {x * y}");
-                    }
-                    if (n == 4)
-                    {
-                        Console.Write($"Результат = {x / y}");
-                    }
+                    case 1:
+                        Console.WriteLine($"Результат = {x + y}");
+                        break;
+                    case 2:
+                        Console.WriteLine($"Результат = {x + y}");
+                        break;
+                    case 3:
+                        Console.WriteLine($"Результат = {x * y}");
+                        break;
+                    case 4:
+                        Console.WriteLine($"Результат = {x / y}");
+                        break;
+
+                    default:
+                        Console.WriteLine("Неизвестное имя");
+                        break;
                 }
             }
             catch (System.FormatException)
